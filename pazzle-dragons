@@ -1,0 +1,30 @@
+# coding: utf-8
+import numpy as np
+import sympy as sym
+from scipy import special
+
+def Board_changing(x):
+  if x == 2:
+    a = range(1,6)
+    b = special.comb(24, a)
+    c = b * pow(1/2, 24)
+    d = 1 - sum(c)
+    print(d * 100)
+  
+  elif x == 3:
+    a1 = range(1,6)
+    b = 24 - a1
+    c = special.comb(24, a)
+    d = b * pow(1/3, a) * pow(2/3, b) 
+    e = 1 - sum(c)
+    print(e * 100)
+  
+  elif x == 4:
+    a = range(1,6)
+    b = special.comb(24, a)
+    c = b * pow(1/4, 24)
+    d = 1 - sum(c)
+    print(d * 10)
+    
+    
+Board_changing(3)
