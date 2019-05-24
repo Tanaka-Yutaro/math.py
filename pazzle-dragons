@@ -11,26 +11,57 @@ def Board_changing(x):
     b = special.comb(24, a)
     c = b * pow(1/2,24)
     d = 1 - sum(c)
-    print(b)
+    e = d * 100
+    print(e)
   elif x == 3:
     a = list(range(6))
-    def calc_min(n):
-      return 24 - n
-    b = list(map(calc_min, a))
-    c = special.comb(24, a)
+    b = special.comb(21, a)
     def calc_powa(n):
       return 1/3 ** n
-    d = list(map(calc_powa, a))
+    c = list(map(calc_powa, a))
     def calc_powb(n):
-      return 2/3 ** 24 - n
-    e = list(map(calc_powb, a))
-    print(e)
+      return (2/3) ** (21 - n)
+    d = list(map(calc_powb, a))
+    e = 1 - sum(b * c * d)
+    f = e * 100
+    print(f)
   elif x == 4:
-    a = range(6)
-    b = special.comb(24, a)
-    c = b * pow(1/4, 24)
-    d = 1 - sum(c)
-    print(d * 100)
+    a = list(range(6))
+    b = special.comb(18, a)
+    def calc_powa(n):
+      return 1/4 ** n
+    c = list(map(calc_powa, a))
+    def calc_powb(n):
+      return (3/4) ** (18 - n)
+    d = list(map(calc_powb, a))
+    e = 1 - sum(b * c * d)
+    f = e * 100
+    print(f)
+  elif x == 5:
+    a = list(range(6))
+    b = special.comb(15, a)
+    def calc_powa(n):
+      return 1/5 ** n
+    c = list(map(calc_powa, a))
+    def calc_powb(n):
+      return (4/5) ** (15 - n)
+    d = list(map(calc_powb, a))
+    e = 1 - sum(b * c * d)
+    f = e * 100
+    print(f)
+  elif x == 6:
+    a = list(range(6))
+    b = special.comb(12, a)
+    def calc_powa(n):
+      return 1/6 ** n
+    c = list(map(calc_powa, a))
+    def calc_powb(n):
+      return (5/6) ** (12 - n)
+    d = list(map(calc_powb, a))
+    e = 1 - sum(b * c * d)
+    f = e * 100
+    print(f)
     
+  
     
-Board_changing(2)
+Board_changing(5)
