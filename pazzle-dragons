@@ -7,7 +7,7 @@ import itertools
 
 def Board_changing(x):
   if x == 2:
-    a = range(6)
+    a = range(10)
     b = special.comb(24, a)
     c = b * pow(1/2,24)
     d = 1 - sum(c)
@@ -64,4 +64,4 @@ def Board_changing(x):
     
   
     
-Board_changing(5)
+Board_changing(2)
