@@ -23,8 +23,8 @@ def Board_changing(x):
     d = list(map(calc_powa, a))
     def calc_powb(n):
       return 2/3 ** 24 - n
-    e = list(map(calc_powb, a)
-   
+    e = list(map(calc_powb, a))
+    print(e)
   elif x == 4:
     a = range(6)
     b = special.comb(24, a)
